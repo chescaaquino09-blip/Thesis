@@ -1,0 +1,628 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wala Pa | Energy Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <a href="#overview" class="brand">
+            <span class="logo">W</span>
+            <span>Wala Pa<span class="cyan">Website</span></span>
+        </a>
+
+        <p class="nav-heading">WORKSPACE</p>
+
+        <nav>
+            <a href="#overview" class="nav-link active">▦ Overview</a>
+            <a href="#appliances" class="nav-link">⌁ Appliances</a>
+            <a href="#analytics" class="nav-link">▥ Energy Analytics</a>
+            <a href="#forecast" class="nav-link">✧ AI Forecast</a>
+            <a href="#alerts" class="nav-link">◉ Alerts <span class="badge">2</span></a>
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="system-box">
+                <span class="status-dot"></span>
+                <div>
+                    <strong>System Status</strong>
+                    <small>Demo interface</small>
+                </div>
+            </div>
+
+            <!-- SETTINGS BUTTON -->
+            <a href="settings.html" class="nav-link" id="openSettings">
+                ⚙ Settings
+            </a>
+
+            <!-- LOG OUT BUTTON -->
+            <button type="button" class="nav-link logout-link" id="logoutButton">
+                ⇥ Log Out
+            </button>
+
+            <!-- USER PROFILE -->
+            <div class="profile">
+                <div class="avatar">DU</div>
+                <div>
+                    <strong>Demo User</strong>
+                    <small>Home Workspace</small>
+                </div>
+            </div>
+
+        </div>
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="overview">
+
+        <header class="topbar">
+            <div class="breadcrumb">
+                Workspace / <strong>Overview</strong>
+            </div>
+
+            <div class="top-actions">
+                <span class="demo-label">● DEVICE DASHBOARD</span>
+                <div class="avatar">DU</div>
+            </div>
+        </header>
+
+
+        <!-- PAGE TITLE -->
+        <section class="page-heading">
+            <div>
+                <p class="eyebrow">SMART HOME / ENERGY INTELLIGENCE</p>
+                <h1>Energy Overview<span class="cyan">.</span></h1>
+                <p class="subtitle">
+                    A clearer picture of your home's energy consumption.
+                </p>
+            </div>
+
+            <div class="date-box">▦ &nbsp; October 18, 2026</div>
+        </section>
+
+
+        <div class="notice">
+            <span>i</span>
+            <p>
+                <strong>Prototype preview:</strong>
+                All readings, forecasts, and charts are sample data.
+                Live hardware and backend integration are not yet connected.
+            </p>
+        </div>
+
+
+        <!-- SUMMARY CARDS -->
+        <section class="stats-grid">
+
+            <article class="stat-card">
+                <div class="card-heading">
+                    <span>Energy Used Today</span>
+                    <span class="stat-icon cyan-bg">ϟ</span>
+                </div>
+
+                <h2>8.42 <small>kWh</small></h2>
+
+                <p class="positive">
+                    ↘ 8.4% <span>vs. yesterday</span>
+                </p>
+
+                <div class="mini-bars">
+                    <i style="height:35%"></i>
+                    <i style="height:55%"></i>
+                    <i style="height:43%"></i>
+                    <i style="height:75%"></i>
+                    <i style="height:50%"></i>
+                    <i style="height:90%"></i>
+                    <i style="height:62%"></i>
+                    <i style="height:72%"></i>
+                    <i style="height:48%"></i>
+                    <i style="height:65%"></i>
+                </div>
+            </article>
+
+
+            <article class="stat-card">
+                <div class="card-heading">
+                    <span>Current Power Draw</span>
+                    <span class="stat-icon purple-bg">ϟ</span>
+                </div>
+
+                <h2>642 <small>W</small></h2>
+
+                <p class="positive">
+                    ● Stable <span>across 4 devices</span>
+                </p>
+
+                <div class="progress">
+                    <div class="purple-progress" style="width:54%"></div>
+                </div>
+
+                <div class="progress-label">
+                    <span>0 W</span>
+                    <span>1,200 W capacity</span>
+                </div>
+            </article>
+
+
+            <article class="stat-card">
+                <div class="card-heading">
+                    <span>Estimated Cost</span>
+                    <span class="stat-icon green-bg">₱</span>
+                </div>
+
+                <h2>₱84.20</h2>
+
+                <p class="positive">
+                    ↗ Within budget <span>today's estimate</span>
+                </p>
+
+                <div class="progress">
+                    <div class="green-progress" style="width:42%"></div>
+                </div>
+
+                <div class="progress-label">
+                    <span>₱0</span>
+                    <span>₱200 daily budget</span>
+                </div>
+            </article>
+
+
+            <article class="stat-card">
+                <div class="card-heading">
+                    <span>Connected Appliances</span>
+                    <span class="stat-icon orange-bg">⌁</span>
+                </div>
+
+                <h2>4 <small>/ 5 devices</small></h2>
+
+                <p class="positive">
+                    ● 4 online <span>1 offline</span>
+                </p>
+
+                <div class="device-icons">
+                    <span>▣</span>
+                    <span>▤</span>
+                    <span>⌂</span>
+                    <span>ϟ</span>
+                </div>
+            </article>
+
+        </section>
+
+
+        <!-- ANALYTICS AND AI FORECAST -->
+        <section class="main-grid">
+
+            <!-- ENERGY ANALYTICS -->
+            <article class="panel" id="analytics">
+
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">CONSUMPTION TRENDS</p>
+                        <h2>Energy Usage</h2>
+                        <p class="subtitle">
+                            Illustrative energy consumption over seven days
+                        </p>
+                    </div>
+
+                    <span class="period-label">Last 7 Days⌄</span>
+                </div>
+
+
+                <div class="chart-legend">
+                    <span><i class="legend-cyan"></i> Actual usage</span>
+                    <span><i class="legend-purple"></i> Forecast</span>
+                </div>
+
+
+                <!-- CSS-BASED CHART -->
+                <div class="chart">
+
+                    <div class="y-labels">
+                        <span>12 kWh</span>
+                        <span>9 kWh</span>
+                        <span>6 kWh</span>
+                        <span>3 kWh</span>
+                        <span>0 kWh</span>
+                    </div>
+
+                    <div class="chart-content">
+
+                        <div class="chart-lines">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="bars">
+
+                            <div class="bar-column">
+                                <div class="bar" style="height:45%"></div>
+                                <span>Mon</span>
+                            </div>
+
+                            <div class="bar-column">
+                                <div class="bar" style="height:62%"></div>
+                                <span>Tue</span>
+                            </div>
+
+                            <div class="bar-column">
+                                <div class="bar" style="height:52%"></div>
+                                <span>Wed</span>
+                            </div>
+
+                            <div class="bar-column">
+                                <div class="bar" style="height:72%"></div>
+                                <span>Thu</span>
+                            </div>
+
+                            <div class="bar-column">
+                                <div class="bar" style="height:85%"></div>
+                                <span>Fri</span>
+                            </div>
+
+                            <div class="bar-column">
+                                <div class="bar" style="height:58%"></div>
+                                <span>Sat</span>
+                            </div>
+
+                            <div class="bar-column forecast-bar">
+                                <div class="bar" style="height:68%"></div>
+                                <span>Sun</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="chart-footer">
+
+                    <div>
+                        <span class="small-dot"></span>
+                        <span>Daily average</span>
+                        <strong>7.86 kWh</strong>
+                    </div>
+
+                    <div>
+                        <span class="small-dot cyan-dot"></span>
+                        <span>Peak usage</span>
+                        <strong>10.2 kWh</strong>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- AI FORECAST -->
+            <article class="panel forecast-panel" id="forecast">
+
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">PREDICTIVE INSIGHTS</p>
+                        <h2>AI Consumption Forecast</h2>
+                    </div>
+
+                    <span class="ai-badge">✧ AI PREVIEW</span>
+                </div>
+
+
+                <div class="ai-orb">
+                    <div class="orb-inner">
+                        <span>✧</span>
+                        <small>AI</small>
+                    </div>
+                </div>
+
+
+                <p class="forecast-label">
+                    Predicted Energy for Tomorrow
+                </p>
+
+                <div class="forecast-number">
+                    9.15 <small>kWh</small>
+                </div>
+
+                <p class="forecast-change">
+                    ↗ 6.2% compared with today's usage
+                </p>
+
+                <hr>
+
+
+                <div class="forecast-row">
+                    <span>Estimated cost tomorrow</span>
+                    <strong>₱91.50</strong>
+                </div>
+
+                <div class="forecast-row">
+                    <span>Model confidence</span>
+                    <strong class="cyan">Demo: 92%</strong>
+                </div>
+
+                <div class="progress">
+                    <div class="cyan-progress" style="width:92%"></div>
+                </div>
+
+                <p class="fine-print">
+                    Sample values only. Actual forecasts require historical
+                    readings and a trained Random Forest Regression model.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- APPLIANCES AND ALERTS -->
+        <section class="bottom-grid">
+
+            <!-- APPLIANCE MONITORING -->
+            <article class="panel" id="appliances">
+
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">DEVICE MANAGEMENT</p>
+                        <h2>Appliance Monitoring</h2>
+                        <p class="subtitle">
+                            Latest sample readings from smart plugs
+                        </p>
+                    </div>
+
+                    <a href="#appliances" class="view-link">View all →</a>
+                </div>
+
+
+                <!-- DEVICE REGISTRATION FORM -->
+                <form class="device-form" id="deviceForm">
+
+                    <input
+                        type="text"
+                        id="applianceName"
+                        placeholder="Enter appliance name (e.g. Air Conditioner)"
+                        maxlength="80"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        id="deviceCode"
+                        placeholder="Enter ESP32 Device Code (e.g. meter-123456)"
+                        required
+                    >
+
+                    <button type="submit" id="addDeviceButton">
+                        + Register Appliance
+                    </button>
+
+                    <p class="form-message" id="deviceMessage" aria-live="polite">
+                        Enter the device code displayed in your ESP32 Serial Monitor.
+                    </p>
+
+                </form>
+
+
+                <!-- REGISTERED APPLIANCES -->
+                <div class="appliance-list" id="applianceList">
+                    <p class="appliance-empty">
+                        Loading your registered appliances...
+                    </p>
+                </div>
+
+
+                <p class="fine-print">
+                    Registered appliances are listed here. Live readings
+                    will appear after the ESP32 is linked to each Smart Plug ID.
+                </p>
+
+            </article>
+
+
+            <!-- ALERTS AND INSIGHTS -->
+            <article class="panel" id="alerts">
+
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">SYSTEM INTELLIGENCE</p>
+                        <h2>Insights & Alerts</h2>
+                    </div>
+
+                    <span class="badge">2</span>
+                </div>
+
+
+                <div class="insight">
+
+                    <div class="insight-icon orange-bg">!</div>
+
+                    <div>
+                        <div class="insight-title">
+                            <strong>Higher Evening Usage</strong>
+                            <span class="notice-tag">NOTICE</span>
+                        </div>
+
+                        <p>
+                            Sample insight: usage may be higher between
+                            6 PM and 9 PM.
+                        </p>
+
+                        <small>Example alert · 18:10</small>
+                    </div>
+
+                </div>
+
+
+                <div class="insight">
+
+                    <div class="insight-icon cyan-bg">✧</div>
+
+                    <div>
+                        <div class="insight-title">
+                            <strong>Energy-Saving Tip</strong>
+                            <span class="tip-tag">TIP</span>
+                        </div>
+
+                        <p>
+                            Consider switching off idle devices to reduce
+                            standby energy consumption.
+                        </p>
+
+                        <small>Example recommendation</small>
+                    </div>
+
+                </div>
+
+
+                <a href="#alerts" class="view-link">
+                    See all insights →
+                </a>
+
+            </article>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+            <span>WattWise / Smart Home Energy Intelligence</span>
+            <span>● Supabase-connected device registration</span>
+        </footer>
+
+
+        <!-- SETTINGS POPUP -->
+        <div class="settings-popup-overlay" id="settingsPopup">
+
+            <div class="settings-popup-window">
+
+                <button
+                    type="button"
+                    class="settings-popup-close"
+                    id="closeSettings"
+                    aria-label="Close settings">
+                    &times;
+                </button>
+
+                <iframe
+                    src="settings.html"
+                    id="settingsFrame"
+                    title="WattWise Settings"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- SUPABASE DASHBOARD JAVASCRIPT -->
+<script type="module" src="dashboard.js"></script>
+
+
+<!-- SETTINGS POPUP JAVASCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const settingsLink = document.getElementById("openSettings");
+    const popup = document.getElementById("settingsPopup");
+    const closeButton = document.getElementById("closeSettings");
+
+    if (!settingsLink || !popup || !closeButton) {
+        console.error("WattWise Settings popup elements were not found.");
+        return;
+    }
+
+
+    function openSettings(event) {
+
+        if (event) {
+            event.preventDefault();
+        }
+
+        popup.classList.add("active");
+        document.body.style.overflow = "hidden";
+
+    }
+
+
+    function closeSettings() {
+
+        popup.classList.remove("active");
+        document.body.style.overflow = "";
+
+    }
+
+
+    // OPEN SETTINGS POPUP
+    settingsLink.addEventListener("click", openSettings);
+
+
+    // CLOSE USING X BUTTON
+    closeButton.addEventListener("click", closeSettings);
+
+
+    // CLOSE WHEN CLICKING OUTSIDE THE WINDOW
+    popup.addEventListener("click", event => {
+
+        if (event.target === popup) {
+            closeSettings();
+        }
+
+    });
+
+
+    // CLOSE USING ESCAPE KEY
+    document.addEventListener("keydown", event => {
+
+        if (
+            event.key === "Escape" &&
+            popup.classList.contains("active")
+        ) {
+            closeSettings();
+        }
+
+    });
+
+
+    // RECEIVE MESSAGES FROM SETTINGS.HTML
+    window.addEventListener("message", event => {
+
+        if (event.origin !== window.location.origin) {
+            return;
+        }
+
+
+        if (event.data?.type === "WATTWISE_CLOSE_SETTINGS") {
+            closeSettings();
+        }
+
+
+        if (event.data?.type === "WATTWISE_SETTINGS_SAVED") {
+            console.log("WattWise preferences saved.");
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
+```

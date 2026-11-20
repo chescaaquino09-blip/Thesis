@@ -1,0 +1,451 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WattWise | Settings</title>
+    <link rel="stylesheet" href="settings.css">
+</head>
+
+<body>
+
+<div class="settings-app">
+
+    <!-- SETTINGS HEADER -->
+    <header class="settings-header">
+        <div class="settings-brand">
+            <div class="settings-brand-logo">W</div>
+            <div>
+                <h1>WattWise <span>Settings</span></h1>
+                <p>Personalize your energy management experience</p>
+            </div>
+        </div>
+
+        <div class="settings-status">
+            <span class="status-indicator"></span>
+            Preferences
+        </div>
+    </header>
+
+    <!-- SETTINGS NAVIGATION -->
+    <div class="settings-content">
+
+        <aside class="settings-navigation">
+            <p class="navigation-label">GENERAL</p>
+
+            <button class="settings-tab active" data-tab="profile">
+                <span>◉</span>
+                Profile
+            </button>
+
+            <button class="settings-tab" data-tab="energy">
+                <span>ϟ</span>
+                Energy Preferences
+            </button>
+
+            <button class="settings-tab" data-tab="notifications">
+                <span>♧</span>
+                Notifications
+            </button>
+
+            <p class="navigation-label">SYSTEM</p>
+
+            <button class="settings-tab" data-tab="appearance">
+                <span>◐</span>
+                Appearance
+            </button>
+
+            <button class="settings-tab" data-tab="security">
+                <span>⌑</span>
+                Account & Security
+            </button>
+
+            <button class="settings-tab" data-tab="about">
+                <span>ⓘ</span>
+                About WattWise
+            </button>
+
+            <div class="settings-navigation-footer">
+                <span class="status-indicator"></span>
+                <div>
+                    <strong>WattWise</strong>
+                    <small>Prototype Version 1.0</small>
+                </div>
+            </div>
+        </aside>
+
+        <!-- SETTINGS PANELS -->
+        <main class="settings-main">
+
+            <!-- PROFILE -->
+            <section class="settings-panel active" id="profile">
+                <div class="panel-heading">
+                    <span class="section-label">GENERAL SETTINGS</span>
+                    <h2>Profile Information</h2>
+                    <p>Manage your personal information and account details.</p>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-avatar" id="profileAvatar">DU</div>
+                    <div>
+                        <h3 id="profileDisplayName">Demo User</h3>
+                        <p id="profileDisplayEmail">demo@example.com</p>
+                        <span class="account-tag">HOME WORKSPACE</span>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+                    <h3>Personal Details</h3>
+                    <p class="card-description">
+                        Update the information displayed on your account.
+                    </p>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="settingsName">Full Name</label>
+                            <input type="text" id="settingsName"
+                                   placeholder="Enter full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="settingsEmail">Email Address</label>
+                            <input type="email" id="settingsEmail"
+                                   placeholder="Enter email address">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="homeName">Home / Workspace Name</label>
+                        <input type="text" id="homeName"
+                               placeholder="e.g. My Home">
+                    </div>
+                </div>
+            </section>
+
+            <!-- ENERGY PREFERENCES -->
+            <section class="settings-panel" id="energy">
+                <div class="panel-heading">
+                    <span class="section-label">MONITORING CONFIGURATION</span>
+                    <h2>Energy Preferences</h2>
+                    <p>Configure your electricity estimates and consumption limits.</p>
+                </div>
+
+                <div class="settings-card">
+                    <h3>Electricity Cost</h3>
+                    <p class="card-description">
+                        Set the electricity rate used by the cost estimation feature.
+                    </p>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="electricityRate">
+                                Electricity Rate (₱ / kWh)
+                            </label>
+                            <input type="number" id="electricityRate"
+                                   min="0" step="0.01" value="10.00">
+                            <small>Use the rate from your electricity bill.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="monthlyBudget">
+                                Monthly Electricity Budget (₱)
+                            </label>
+                            <input type="number" id="monthlyBudget"
+                                   min="0" step="100" value="3000">
+                            <small>Your preferred monthly spending limit.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+                    <h3>Consumption Thresholds</h3>
+                    <p class="card-description">
+                        Set preferred limits for energy monitoring alerts.
+                    </p>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="dailyLimit">Daily Energy Limit (kWh)</label>
+                            <input type="number" id="dailyLimit"
+                                   min="0" step="0.1" value="15">
+                            <small>Preferred maximum daily energy consumption.</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="powerLimit">Power Alert Threshold (W)</label>
+                            <input type="number" id="powerLimit"
+                                   min="0" step="1" value="1500">
+                            <small>Preferred power threshold for alerts.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="information-note">
+                    <span>i</span>
+                    <p>
+                        These values are user preferences. They will only affect
+                        actual calculations and alerts after backend integration.
+                    </p>
+                </div>
+            </section>
+
+            <!-- NOTIFICATIONS -->
+            <section class="settings-panel" id="notifications">
+                <div class="panel-heading">
+                    <span class="section-label">ALERT CONFIGURATION</span>
+                    <h2>Notifications</h2>
+                    <p>Choose which energy-related notifications you want enabled.</p>
+                </div>
+
+                <div class="settings-card">
+                    <div class="toggle-row">
+                        <div class="toggle-description">
+                            <strong>High Energy Consumption</strong>
+                            <p>Alert when energy usage exceeds your daily limit.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="highUsageToggle" checked>
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-row">
+                        <div class="toggle-description">
+                            <strong>Unusual Energy Usage</strong>
+                            <p>Notify when unusual appliance consumption is detected.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="anomalyToggle" checked>
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-row">
+                        <div class="toggle-description">
+                            <strong>Smart Plug Disconnection</strong>
+                            <p>Notify when a registered smart plug goes offline.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="offlineToggle" checked>
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-row">
+                        <div class="toggle-description">
+                            <strong>AI Forecast Updates</strong>
+                            <p>Enable notifications for updated energy forecasts.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="forecastToggle" checked>
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-row">
+                        <div class="toggle-description">
+                            <strong>System Notifications</strong>
+                            <p>Receive general system status notifications.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="systemToggle" checked>
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="information-note">
+                    <span>i</span>
+                    <p>
+                        Notification switches currently save preferences only.
+                        Actual alerts require notification logic and backend integration.
+                    </p>
+                </div>
+            </section>
+
+            <!-- APPEARANCE -->
+            <section class="settings-panel" id="appearance">
+                <div class="panel-heading">
+                    <span class="section-label">DISPLAY CONFIGURATION</span>
+                    <h2>Appearance</h2>
+                    <p>Customize how WattWise is displayed.</p>
+                </div>
+
+                <div class="settings-card">
+                    <h3>Dashboard Theme</h3>
+                    <p class="card-description">
+                        Select your preferred dashboard appearance.
+                    </p>
+
+                    <div class="theme-options">
+                        <label class="theme-choice selected" data-theme="dark">
+                            <input type="radio" name="theme" value="dark" checked>
+                            <div class="theme-preview dark-preview">
+                                <div></div><div></div><div></div>
+                            </div>
+                            <strong>Dark Mode</strong>
+                            <small>Navy and cyan</small>
+                        </label>
+
+                        <label class="theme-choice" data-theme="light">
+                            <input type="radio" name="theme" value="light">
+                            <div class="theme-preview light-preview">
+                                <div></div><div></div><div></div>
+                            </div>
+                            <strong>Light Mode</strong>
+                            <small>Light and clean</small>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="settings-card">
+                    <h3>Dashboard Preferences</h3>
+
+                    <div class="toggle-row">
+                        <div class="toggle-description">
+                            <strong>Show Welcome Message</strong>
+                            <p>Display the dashboard greeting when opening WattWise.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="welcomeToggle" checked>
+                            <span></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-row">
+                        <div class="toggle-description">
+                            <strong>Show System Status</strong>
+                            <p>Display device and connection status information.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="statusToggle" checked>
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECURITY -->
+            <section class="settings-panel" id="security">
+                <div class="panel-heading">
+                    <span class="section-label">ACCOUNT MANAGEMENT</span>
+                    <h2>Account & Security</h2>
+                    <p>Review account access and security options.</p>
+                </div>
+
+                <div class="settings-card">
+                    <h3>Account Authentication</h3>
+
+                    <div class="security-item">
+                        <div class="security-icon">✓</div>
+                        <div>
+                            <strong>Account Login</strong>
+                            <p>Authentication is handled by Supabase when connected.</p>
+                        </div>
+                        <span class="security-label">SUPABASE</span>
+                    </div>
+
+                    <div class="security-item">
+                        <div class="security-icon">⌑</div>
+                        <div>
+                            <strong>Password Management</strong>
+                            <p>Password changes will be handled through account authentication.</p>
+                        </div>
+                        <span class="security-label">BACKEND</span>
+                    </div>
+
+                    <div class="security-item">
+                        <div class="security-icon">↗</div>
+                        <div>
+                            <strong>Active Session</strong>
+                            <p>Your login session is managed by the authentication system.</p>
+                        </div>
+                        <span class="security-label">AUTH</span>
+                    </div>
+                </div>
+
+                <div class="information-note">
+                    <span>i</span>
+                    <p>
+                        Password changes and sign-out actions are not simulated here.
+                        They should be connected to Supabase Auth to work securely.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ABOUT -->
+            <section class="settings-panel" id="about">
+                <div class="panel-heading">
+                    <span class="section-label">SYSTEM INFORMATION</span>
+                    <h2>About WattWise</h2>
+                    <p>Information about the WattWise energy monitoring system.</p>
+                </div>
+
+                <div class="about-banner">
+                    <div class="about-logo">W</div>
+                    <h2>WattWise</h2>
+                    <p>Smart Home Energy Intelligence</p>
+                    <span>PROTOTYPE VERSION 1.0</span>
+                </div>
+
+                <div class="settings-card">
+                    <h3>System Details</h3>
+
+                    <div class="detail-row">
+                        <span>System Name</span>
+                        <strong>WattWise</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>System Type</span>
+                        <strong>IoT Smart Plug Energy Monitoring</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Microcontroller</span>
+                        <strong>ESP32</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Database</span>
+                        <strong>Supabase</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Forecasting Algorithm</span>
+                        <strong>Random Forest Regression</strong>
+                    </div>
+
+                    <div class="detail-row">
+                        <span>Purpose</span>
+                        <strong>Energy Monitoring and Consumption Forecasting</strong>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="settings-footer">
+        <p id="settingsMessage">Your preferences have not been saved yet.</p>
+
+        <div class="footer-actions">
+            <button type="button" class="cancel-button" id="cancelSettings">
+                Cancel
+            </button>
+
+            <button type="button" class="save-button" id="saveSettings">
+                Save Changes <span>→</span>
+            </button>
+        </div>
+    </footer>
+
+</div>
+
+<script src="settings.js"></script>
+
+</body>
+</html>
